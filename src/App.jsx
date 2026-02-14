@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
+import CardPersonaje from './components/CardPersonaje'
 
 function App() {
   const API_URL = 'https://thesimpsonsapi.com/api/characters'
@@ -27,11 +28,7 @@ function App() {
       <h1>Personajes de los Simpos</h1>
       <div className="listado__personajes">
         {personajes.map((personaje) => (
-          <div className="personaje__card" key={personaje.id}>
-            <h2 className="personaje__nombre">
-              {personaje.name}
-            </h2>
-          </div>
+          <CardPersonaje key={personaje.id} personaje={personaje}></CardPersonaje>
         ))}
       </div>
     </div>
