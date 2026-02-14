@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -6,6 +6,30 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Tema Springfield / Simpson */
+  --simpson-yellow: #FFD90F;
+  --simpson-yellow-dark: #FFC107;
+  --simpson-yellow-light: #FFE566;
+  --simpson-blue: #1E88E5;
+  --simpson-sky: #87CEEB;
+  --simpson-skin: #FFDBAC;
+  --simpson-brown: #5D4037;
+  --simpson-white: #FFFDE7;
+  --simpson-gray: #424242;
+  --simpson-border: rgba(93, 64, 55, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 8px 24px rgba(255, 201, 7, 0.35);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.25s ease;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(160deg, var(--simpson-sky) 0%, var(--simpson-white) 50%, var(--simpson-yellow-light) 100%);
+  min-height: 100vh;
+  color: var(--simpson-brown);
+  line-height: 1.5;
 }

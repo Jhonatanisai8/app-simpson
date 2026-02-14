@@ -18,7 +18,11 @@ const ListadoPersonaje = () => {
   }, [])
 
   if (error) {
-    return <p>{error}</p>
+    return (
+      <div className="container__personajes">
+        <p className="container__error">{error}</p>
+      </div>
+    )
   }
   return (
     <div className="container__personajes">
