@@ -14,7 +14,7 @@ function App() {
       }
       const resultado = await response.json();
       console.log(resultado);
-      setPersonajes(personajes)
+      setPersonajes(resultado.results)
     } catch (error) {
       console.log(error)
     }
@@ -24,7 +24,16 @@ function App() {
   }, [])
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>Personajes de los Simpos</h1>
+      <div className="listado__personajes">
+        {personajes.map((personaje) => (
+          <div className="personaje__card" key={personaje.id}>
+            <h2 className="personaje__nombre">
+              {personaje.name}
+            </h2>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
