@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CardPersonaje from './CardPersonaje'
 import { obtemerPersonajes } from '../services/PersonajeService'
-
+import '../assets/styles/ListadoPersonaje.css'
 const ListadoPersonaje = () => {
   const [personajes, setPersonajes] = useState([])
   const [error, setError] = useState(null)
@@ -21,9 +21,9 @@ const ListadoPersonaje = () => {
     return <p>{error}</p>
   }
   return (
-    <div>
-      <h1>Personajes de los Simpos</h1>
-      <div className="listado__personajes">
+    <div className="container__personajes">
+      <h1 className="container__title">Personajes de los Simpos</h1>
+      <div className="container__personaje">
         {personajes.map((personaje) => (
           <CardPersonaje key={personaje.id} personaje={personaje}></CardPersonaje>
         ))}

@@ -1,0 +1,71 @@
+.card__personaje {
+  width: 30%;
+  border: 2px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.card__personaje:hover {
+  box-shadow: 1px 1px 5px #FFCA3A;
+  background-image: linear-gradient(45deg, #FFCA3A 25%, #FFD972 100%);
+  cursor: pointer;
+}
+
+.personaje__nombre {
+  text-align: center;
+}
+
+.personaje__img {
+  display: flex;
+  justify-content: center;
+}
+
+.personaje__img img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.listado__datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 2rem;
+}
+
+.listad__item {
+  list-style-type: none;
+  font-size: .7rem;
+
+}
+
+.listad__item p {
+  font-weight: bold;
+}
+
+.listad__item p span {
+  font-weight: normal;
+}
+
+.frases__list {
+  margin: 0 2rem;
+}
+
+.frases__list .listad__item {
+  list-style: circle;
+  font-size: .7rem;
+}
+
+.personaje__datos-personales {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.datos__personales {
+  height: 20%;
+}
+
+.personaje__frases {
+  flex-grow: 1;
+}
