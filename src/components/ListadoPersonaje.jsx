@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import CardPersonaje from './CardPersonaje'
+import { obtemerPersonajes } from '../services/PersonajeService'
 
 const ListadoPersonaje = () => {
-  const API_URL = 'https://thesimpsonsapi.com/api/characters'
   const [personajes, setPersonajes] = useState([])
-
-  async function obtenerPersonajes() {
-    try {
-      const response = await fetch(API_URL)
-      if (!response.ok) {
-        throw new Error("Error al obtener los datos");
-      }
-      const resultado = await response.json();
-      console.log(resultado);
-      setPersonajes(resultado.results)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const [error, setError] = useState(null)
   useEffect(() => {
-    obtenerPersonajes()
+    const cargarDatos = async () => {
+      try {
+        const datos = await obtemerPersonajes()
+        setPersonajes(datos)
+      } catch (error) {
+        setError("No se pudieron cargar los personajes...")
+      }
+    }
+    cargarDatos()
   }, [])
+
+  if (error) {
+    return <p>{error}</p>
+  }
   return (
     <div>
       <h1>Personajes de los Simpos</h1>
