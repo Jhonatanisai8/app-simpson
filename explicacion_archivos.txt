@@ -1,0 +1,24 @@
+📂 ESTRUCTURA DEL PROYECTO APP-SIMPSON
+
+--- RAIZ (ROOT) ---
+- package.json: Información del proyecto, dependencias y scripts para ejecutarlo (npm run dev).
+- vite.config.js: Configuración de Vite (nuestro servidor de desarrollo rápido).
+- index.html: El único archivo HTML que se carga en el navegador. Aquí "vive" nuestra App React.
+- README.md: Documentación del proyecto (lo que acabas de editar).
+
+--- SRC (CÓDIGO FUENTE) ---
+- main.jsx: Punto de entrada de React. Conecta la lógica JS con el HTML (root).
+- App.jsx: Componente padre de toda la aplicación. Estructura principal.
+- App.css: Estilos generales de la aplicación.
+- index.css: Estilos globales y reseteos CSS.
+
+--- SRC/SERVICES (SERVICIOS) ---
+- PersonajeService.js: Encargado de hablar con la API. Solo hace el fetch y devuelve datos limpios.
+
+--- SRC/COMPONENTS (COMPONENTES) ---
+- ListadoPersonaje.jsx: Cerebro de la lista. Usa useEffect para llamar al servicio y guarda los personajes en un estado.
+- CardPersonaje.jsx: Componente tonto (presentacional). Solo recibe datos de UN personaje y los dibuja bonito.
+- Footer.jsx: Pie de página de la web.
+
+--- SRC/ASSETS (RECURSOS) ---
+- (Carpetas de images/styles): Donde guardas fotos estáticas o CSS específicos de componentes.
