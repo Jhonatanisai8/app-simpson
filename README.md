@@ -70,7 +70,7 @@ El proyecto consume el siguiente endpoint:
 
 ## ✒️ Autor
 
-**Jhonatan** - Desarrollador Frontend
+**Jhonatan** - Desarrollador Full Stack
 
 ---
 
